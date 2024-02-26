@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "double_linked_list.h": "c",
+        "acutest.h": "c",
+        "stdio.h": "c"
+    }
+}

@@ -1,0 +1,7 @@
+The Netpbm formats are all raster formats,
+ i.e. they describe an image as a matrix of rows and columns of pixels.
+ In the PBM format, the pixels are black and white.
+ In the PGM format, pixels are shades of gray
+. In the PPM format, the pixels are in full color.
+
+https://en.wikipedia.org/wiki/Netpbm

@@ -1,0 +1,79 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+void p6_p3(){
+    int width = 0, height = 0, pixels = 0;
+    unsigned char buffer;
+
+    fprintf(stderr, "Converting P6 to P3, BIN color to ASCII color\n");
+
+    putchar('P');
+    putchar('3');
+    putchar('\n');
+
+    // copy rows
+    while ((buffer = getchar()) != ' ') {
+        if (buffer == '#') {
+            putchar('#');
+            while ((buffer = getchar()) != '\n') {
+                putchar(buffer);
+            }
+            putchar('\n');
+            continue;
+        }
+        unsigned char number = buffer - 48;
+        width = width * 10 + number;
+
+        putchar(buffer);
+    }
+    putchar(' ');
+
+    // copy columns
+    while ((buffer = getchar()) != '\n') {
+        unsigned char number = buffer - 48;
+        height = height * 10 + number;
+
+        putchar(buffer);
+    }
+    putchar('\n');
+
+    // depth
+    int depth = 0;
+
+    while ((buffer = getchar()) != '\n') {
+        unsigned char number = buffer - 48;
+        depth = depth * 10 + number;
+        putchar(buffer);
+    }
+    putchar('\n');
+    
+   
+    pixels = width *height;
+
+    fprintf(stderr, "Rows    : %d \n", height);
+    fprintf(stderr, "Columns : %d \n", width);
+    fprintf(stderr, "Pixels  : %d \n", pixels);
+
+    for (int i = 0; i < height; i++) { // for each row ...
+        int row_bytes = width / 8;
+
+        for (int j = 0; j < width; j++) {
+            int a = getchar();
+            int b = getchar();
+            int c = getchar();
+
+            putchar(a+48);
+            putchar(b+48);
+            putchar(c+48);
+
+        }      
+      }
+    }
+
+    putchar('\n');
+}
+
+int main(){
+  
+}

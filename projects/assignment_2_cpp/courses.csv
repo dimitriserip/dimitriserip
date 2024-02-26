@@ -1,0 +1,11 @@
+CourseName,Semester,Optional,Credits
+Computer Science,3,false,3
+Biology,5,true,2
+Economics,2,true,4
+Art,7,true,1
+Physics,4,false,3
+Psychology,8,true,4
+History,1,false,2
+Literature,6,true,1
+Math,2,false,4
+Chemistry,4,true,3
